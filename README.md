@@ -1,28 +1,24 @@
-== README
+Since Rails 4.1.x, if we want to rename the application, the only two files we need to modify are
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+1. **config/application.rb**
 
-Things you may want to cover:
+	```ruby
+	module ApplicationName # <-- rename it here
+	  class Application < Rails::Application
+	     ...
+	  end
+	end
+	```
+2. **config/initializers/session_store.rb**
 
-* Ruby version
+	```ruby
+	Rails.application.config.session_store :cookie_store, key: '_application_name_session' # <-- rename it here
+	```
+	
+## How its work!
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+1. git clone `https://github.com/sanledi-buli/web-rails-template.git` `new_application_name`
+2. Rename the application name
+3. Setup the application configs
+4. Create database
+5. bundle install
