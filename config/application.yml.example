@@ -1,0 +1,7 @@
+development:
+  DB_USERNAME: "root"
+  DB_PASSWORD: "root"
+
+test:
+  DB_USERNAME: "root"
+  DB_PASSWORD: "root"
