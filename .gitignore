@@ -1,0 +1,16 @@
+/.bundle
+/log/*
+!/log/.keep
+/tmp
+.byebug_history
+config/database.yml
+config/secrets.yml
+config/application.yml
+Gemfile.lock
+coverage
+.DS_Store
+.keep
+/config/application.yml
+doc/
+/config/puma.rb
+.idea/
